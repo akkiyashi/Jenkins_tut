@@ -8,8 +8,10 @@ pipeline{
                 }
                 stage("Process"){
                         steps{
-                                if(env.BRANCH_NAME == 'master') {
-                                sh 'ps -ef'
+                                script {
+                                        if(env.BRANCH_NAME == 'master') {
+                                        sh 'ps -ef'
+                                        }
                                 }
                         }
                 }
