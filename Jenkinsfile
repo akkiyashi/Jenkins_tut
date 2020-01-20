@@ -1,4 +1,3 @@
-//Jenkinsfile 
 pipeline {
     stages {
         stage('build') {
