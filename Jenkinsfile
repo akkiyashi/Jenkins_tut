@@ -6,10 +6,12 @@ pipeline{
                                 echo "Hello World"
                         }
                 }
+                if (env.BRANCH_NAME == 'master'){
                 stage("Process"){
                         steps{
                                 sh 'ps -ef'
                         }
+                }
                 }
         }
 }
