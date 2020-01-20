@@ -1,5 +1,8 @@
 node {
-stage('Example1') {
+        stage('output'){
+        echo 'Hello'
+        }
+stage('Process') {
         if (env.BRANCH_NAME == 'master') {
             echo 'I only execute on the master branch'
         } else {
