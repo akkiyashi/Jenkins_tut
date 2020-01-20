@@ -1,12 +1,11 @@
-node {
-        stage('output'){
-        echo 'Hello'
+pipeline{
+        agent { none }
+        stages{
+                stage("Output"){
+                        echo "Hello World"
+                }
+                stage("Process"){
+                        sh ps -ef
+                }
         }
-stage('Process') {
-        if (env.BRANCH_NAME == 'master') {
-            echo 'I only execute on the master branch'
-        } else {
-            echo 'I execute elsewhere'
-        }
-    }
 }
