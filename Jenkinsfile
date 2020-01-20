@@ -1,10 +1,9 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent { docker { image 'python:3.5.1' } }
     stages {
         stage('build') {
             steps {
-                sh 'java -version'
-                sh 'echo Hello World'
+                sh 'python --version'
             }
         }
     }
