@@ -8,7 +8,7 @@ pipeline{
                 }
                 stage("Process"){
                         steps{
-                                sh ps -ef
+                                sh 'ps -ef'
                         }
                 }
         }
