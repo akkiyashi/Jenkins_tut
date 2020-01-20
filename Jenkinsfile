@@ -1,11 +1,15 @@
 pipeline{
-        agent { none }
+        agent none 
         stages{
                 stage("Output"){
-                        echo "Hello World"
+                        steps{
+                                echo "Hello World"
+                        }
                 }
                 stage("Process"){
-                        sh ps -ef
+                        steps{
+                                sh ps -ef
+                        }
                 }
         }
 }
