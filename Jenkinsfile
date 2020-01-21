@@ -8,7 +8,7 @@ pipeline{
                 }
                 stage("Notify"){
                         steps{
-                                notifySlack("Test Message")
+                                slackSend color: '#BADA55', message: 'Hello, World how are you!! This your host Amrut'
                         }
                 }
                 stage("Process"){
