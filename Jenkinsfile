@@ -6,6 +6,11 @@ pipeline{
                                 echo "Hello World"
                         }
                 }
+                stage("Notify"){
+                        steps{
+                                notifySlack("Test Message")
+                        }
+                }
                 stage("Process"){
                         steps{
                                 script {
